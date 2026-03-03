@@ -28,10 +28,10 @@ $(document).ready(function () {
       			el: '.hero--pagi',
       			clickable: true,
     		},
-			navigation: {
+			/*navigation: {
       		    nextEl: '.hero--navi-next',
       		    prevEl: '.hero--navi-prev',
-    		},
+    		},*/
 		});
 	}
 

@@ -412,7 +412,7 @@ blockquote {
 }
 
 .hero__carousel .carousel__navigation {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .hero__carousel .swiper-slide {
@@ -653,10 +653,22 @@ blockquote {
 }
 
 .hpromo2__img {
+    background-color: #e9e5dc;
     display: block;
     border: 2px solid #F8B92E;
     border-radius: 25px;
     overflow: hidden;
+}
+
+.hpromo2__img img {
+    transition: all 0.3s ease;
+    opacity: 1;
+    width: 100%;
+    max-width: 100%;
+}
+
+.hpromo2__img:hover img {
+    opacity: 0.75;
 }
 
 .hservs-sect-rx.sect-rx {
@@ -733,6 +745,41 @@ blockquote {
 
 .hcontacts__info {}
 
+.hconts-list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.hconts-list li {
+	display: flex;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+    list-style: none;
+	gap: 8px;
+}
+
+.hconts-list li span {
+	margin-top: 3px;
+	display: inline-block;
+	font-size: 26px;
+    font-weight: 400;
+    color: #000;
+	line-height: 1;
+}
+
+.hconts-list li a {
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.hconts-list li a:hover {
+    color: #F8B92E;
+}
+
 .hcontacts__form {
     position: relative;
     background-color: #f6f2e9;
@@ -800,6 +847,12 @@ blockquote {
     .hpromo2-sect-rx.sect-rx {
         padding: 40px 0;
     }
+    .hconts-list li {
+        font-size: 22px;
+    }
+    .hconts-list li span {
+        font-size: 24px;
+    }
 }
 
 @media only screen and (max-width: 1079.98px) {
@@ -862,6 +915,16 @@ blockquote {
     .hcontacts__content {
         align-items: inherit;
     }
+    .hconts-list {
+		align-items: center;
+        text-align: center;
+	}
+    .hconts-list li {
+        font-size: 20px;
+    }
+    .hconts-list li span {
+        font-size: 22px;
+    }
 }
 
 @media only screen and (max-width: 859.98px) {
@@ -916,6 +979,12 @@ blockquote {
         flex: 0 1 100%;
         width: 100%;
         padding: 0;
+    }
+    .hconts-list li {
+        font-size: 18px;
+    }
+    .hconts-list li span {
+        font-size: 20px;
     }
 }
 
