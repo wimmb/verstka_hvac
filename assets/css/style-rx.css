@@ -55,7 +55,12 @@ body {
 	overflow-x: hidden;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+.rx h1, .rx .h1, 
+.rx h2, .rx .h2, 
+.rx h3, .rx .h3, 
+.rx h4, .rx .h4, 
+.rx h5, .rx .h5, 
+.rx h6, .rx .h6 {
 	display: block;
 	font-family: 'Archive', serif;
 	font-weight: 400;
@@ -64,64 +69,43 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	margin: 0;
 }
 
-h1, .h1 {
+.rx h1, .rx .h1 {
 	font-size: 40px;
 }
 
-h2, .h2 {
+.rx h2, .rx .h2 {
 	font-size: 36px;
 }
 
-h3, .h3 {
+.rx h3, .rx .h3 {
 	font-size: 32px;
 }
 
-h4, .h4 {
+.rx h4, .rx .h4 {
 	font-size: 28px;
 }
 
-h5, .h5, h6, .h6 {
+.rx h5, .rx .h5, .rx h6, .rx .h6 {
 	font-size: 24px;
 }
 
-b, strong { font-weight: 700; }
-i, em { font-style: normal; }
+.rx b, .rx strong { font-weight: 700; }
+.rx i, .rx em { font-style: normal; }
 
-a {
+.rx a {
 	color: #000000;
 	transition: all 0.3s ease;
 }
 
-a:hover, a:active {
+.rx a:hover, .rx a:active {
 	color: #F8B92E;
 }
 
-img { max-width: 100%; }
-video { max-width: 100%; }
+.rx img { max-width: 100%; }
+.rx video { max-width: 100%; }
 
-p:not(:last-child) {
+.rx p:not(:last-child) {
 	margin-bottom: 10px;
-}
-
-.txt_page ol, .txt_page ol,
-.txt_page ul, .txt_page ul {
-	margin: 10px 0;
-	padding-left: 23px;
-}
-
-.txt_page ul li {
-	list-style: disc;
-}
-
-.txt_page ol li {
-	list-style: decimal;
-}
-
-blockquote {
-	border-left: 4px solid var(--accent-color);
-	margin: 0 0 15px;
-	padding: 6px 10px;
-	font-style: normal;
 }
 
 .hidden {
@@ -129,23 +113,23 @@ blockquote {
 }
 
 @media only screen and (max-width: 991.98px) {
-	h1, .h1 {font-size: 34px;}
-	h2, .h2 {font-size: 30px;}
-	h3, .h3 {font-size: 26px;}
-	h4, .h4 {font-size: 22px;}
-	h5, .h5, h6, .h6 {font-size: 18px;}
+	.rx h1, .rx .h1 {font-size: 34px;}
+	.rx h2, .rx .h2 {font-size: 30px;}
+	.rx h3, .rx .h3 {font-size: 26px;}
+	.rx h4, .rx .h4 {font-size: 22px;}
+	.rx h5, .rx .h5, .rx h6, .rx .h6 {font-size: 18px;}
 }
 
 @media only screen and (max-width: 574.98px) {
-	h1, .h1 {font-size: 30px;}
-	h2, .h2 {font-size: 26px;}
-	h3, .h3 {font-size: 22px;}
-	h4, .h4 {font-size: 20px;}
+	.rx h1, .rx .h1 {font-size: 30px;}
+	.rx h2, .rx .h2 {font-size: 26px;}
+	.rx h3, .rx .h3 {font-size: 22px;}
+	.rx h4, .rx .h4 {font-size: 20px;}
 }
 
 /*-------------BUTTONS-------------*/
 
-.rx-btn {
+.rx .rx-btn {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -168,19 +152,19 @@ blockquote {
 	transition: all 0.3s ease;
 }
 
-.rx-btn:hover, .rx-btn:active, .rx-btn:focus {
+.rx .rx-btn:hover, .rx .rx-btn:active, .rx .rx-btn:focus {
 	border-color: #F8B92E;
 	background-color: #FFFFFF;
 	color: #000000;
 }
 
-.rx-btn.rx-btn--outline {
+.rx .rx-btn.rx-btn--outline {
 	border-color: #F8B92E;
 	background-color: transparent;
 	color: #000000;
 }
 
-.rx-btn.rx-btn--outline:hover, .rx-btn.rx-btn--outline:active, .rx-btn.rx-btn--outline:focus {
+.rx .rx-btn.rx-btn--outline:hover, .rx .rx-btn.rx-btn--outline:active, .rx .rx-btn.rx-btn--outline:focus {
 	border-color: #F8B92E;
 	background-color: #F8B92E;
 	color: #000000;
@@ -199,7 +183,7 @@ blockquote {
 
 /*--------------------GOGOGO-----------------------*/
 
-[class*="__container"] {
+.rx [class*="__container"] {
 	position: relative;
 	max-width: 1340px;
 	width: 100%;
@@ -208,12 +192,12 @@ blockquote {
 	margin: 0 auto;
 }
 
-[class*="__container"].no--padding {
+.rx [class*="__container"].no--padding {
 	padding-left: 0;
 	padding-right: 0;
 }
 
-[class*="__container-ff"] {
+.rx [class*="__container-ff"] {
 	max-width: 1920px;
 	width: 100%;
 	padding: 0;
@@ -231,8 +215,17 @@ blockquote {
     text-align: center;
 }
 
-.sheader__title {
+.rx .sheader__title {
 	font-size: 44px;
+    font-weight: 400;
+	line-height: 1.15;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.rx .sheader__title2 {
+    padding-top: 2px;
+    padding-bottom: 3px;
     font-weight: 400;
 	line-height: 1.15;
 	color: #000000;
@@ -247,12 +240,24 @@ blockquote {
 	color: #000000;
 }
 
+.sheader__desc a,
 .sheader__desc span,
 .sheader__desc b,
 .sheader__desc strong {
-	color: var(--accent-color);
+    font-weight: 700;
+	color: #F8B92E;
 }
 
+.sheader__desc a {
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.sheader__desc a:hover {
+    text-decoration: none;
+}
+
+.sect__bottom,
 .sect__buttons {
 	margin-top: 40px;
 	position: relative;
@@ -365,8 +370,6 @@ blockquote {
 	border-radius: 20px 0 0 0;
 }
 
-.rx {}
-
 /*--------------------------------------*/
 
 .sect-rx.rx {
@@ -382,7 +385,7 @@ blockquote {
     align-items: center;
 }
 
-.hero__title {
+.rx .hero__title {
     font-size: 50px;
     font-weight: 400;
     line-height: 1.15;
@@ -441,9 +444,20 @@ blockquote {
 	gap: 40px;
 }
 
+.pluses__cards.works-pluses {
+    gap: 30px;
+}
+
 .pluses__card {
 	flex: 0 1 calc(100% / 4 - 30px);
 	text-align: center;
+}
+
+.works-pluses .pluses__card {
+    padding: 20px 20px;
+    border: 1px solid #F8B92E;
+    border-radius: 25px;
+	flex: 0 1 calc(100% / 2 - 15px);
 }
 
 .pluses__card-icon {
@@ -465,7 +479,7 @@ blockquote {
 	max-height: 55px;
 }
 
-.pluses__card-title {
+.rx .pluses__card-title {
 	margin-top: 20px;
 	font-size: 26px;
 	font-weight: 400;
@@ -528,7 +542,7 @@ blockquote {
     transform: scale(1.04);
 }
 
-.hprices__card-title {
+.rx .hprices__card-title {
     font-size: 26px;
     font-weight: normal;
     line-height: 1.15;
@@ -629,7 +643,7 @@ blockquote {
     overflow: hidden;
 }
 
-.hchoose__card-title {
+.rx .hchoose__card-title {
     font-size: 26px;
     font-weight: normal;
     line-height: 1.15;
@@ -700,6 +714,9 @@ blockquote {
 }
 
 .hvac__list > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #F8B92E;
     width: calc(100% / 2 - 15px);
     list-style: none;
@@ -709,7 +726,19 @@ blockquote {
     font-size: 26px;
     font-weight: 400;
     line-height: 1.15;
+    color: #000;
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+.hvac__list > li a {
+    display: inline-block;
+    color: #000;
+}
+
+.hvac__list > li a:hover {
+    color: #000;
+    text-decoration: underline;
 }
 
 .hvac__abgal {
@@ -788,6 +817,19 @@ blockquote {
     overflow: hidden;
 }
 
+.hservices-sect-rx.sect-rx {
+    padding-bottom: 30px;
+}
+
+.hservices-sect-rx .sect-header {
+    margin-bottom: 0;
+}
+
+
+
+
+
+
 
 
 
@@ -799,8 +841,6 @@ blockquote {
     background-color: #000;
 }
 
-
-
 /*-------------------------------------------*/
 /*------------------MEDIA--------------------*/
 
@@ -808,10 +848,11 @@ blockquote {
     .sect-header {
 		margin-bottom: 30px;
 	}
+    .sect__bottom,
     .sect__buttons {
         margin-top: 30px;
     }
-    .sheader__title {
+    .rx .sheader__title {
         font-size: 36px;
     }
     .sect-rx {
@@ -820,7 +861,7 @@ blockquote {
     .hero-sect-rx.sect-rx {
         padding: 65px 0;
     }
-    .hero__title {
+    .rx .hero__title {
         font-size: 42px;
     }
     .sheader__desc,
@@ -831,9 +872,9 @@ blockquote {
         padding: 60px 0 50px;
     }
     .hvac__list > li,
-    .hchoose__card-title,
-    .hprices__card-title,
-    .pluses__card-title {
+    .rx .hchoose__card-title,
+    .rx .hprices__card-title,
+    .rx .pluses__card-title {
         font-size: 24px;
     }
     .hchoose__card-text,
@@ -856,10 +897,10 @@ blockquote {
 }
 
 @media only screen and (max-width: 1079.98px) {
-    .sheader__title {
+    .rx .sheader__title {
         font-size: 32px;
     }
-    .hero__title {
+    .rx .hero__title {
         font-size: 36px;
     }
 }
@@ -889,6 +930,13 @@ blockquote {
 	.pluses__card {
 		flex: 0 1 calc(100% / 2 - 10px);
 	}
+    .pluses__cards.works-pluses {
+        gap: 20px;
+    }
+    .works-pluses .pluses__card {
+	    flex: 0 1 calc(100% / 2 - 10px);
+        padding: 20px 18px;
+    }
     .hprices__cards {
         flex-direction: column;
         flex-wrap: inherit;
@@ -899,6 +947,9 @@ blockquote {
     }
     .hchoose__cards {
         gap: 20px;
+    }
+    .hchoose__card {
+        padding: 20px 18px;
     }
     .hvac__list {
         flex-direction: column;
@@ -927,15 +978,13 @@ blockquote {
     }
 }
 
-@media only screen and (max-width: 859.98px) {
-
-}
+@media only screen and (max-width: 859.98px) {}
 
 @media only screen and (max-width: 767.98px) {
-    .sheader__title {
-        font-size: 28px;
+    .rx .sheader__title {
+        font-size: 30px;
     }
-    .hero__title {
+    .rx .hero__title {
         font-size: 32px;
     }
     .sheader__desc,
@@ -943,9 +992,9 @@ blockquote {
         font-size: 18px;
     }
     .hvac__list > li,
-    .hchoose__card-title,
-    .hprices__card-title,
-    .pluses__card-title {
+    .rx .hchoose__card-title,
+    .rx .hprices__card-title,
+    .rx .pluses__card-title {
         font-size: 22px;
     }
     .pluses__card-icon {
@@ -955,6 +1004,13 @@ blockquote {
     .pluses__card-icon img {
         max-height: 40px;
     }
+    .pluses__cards.works-pluses {
+        flex-direction: column;
+    }
+    .works-pluses .pluses__card {
+	    flex: 0 1 100%;
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 599.98px) {
@@ -962,8 +1018,8 @@ blockquote {
         width: 100%;
     }
     .hvac__list > li,
-    .hchoose__card-title,
-    .pluses__card-title {
+    .rx .hchoose__card-title,
+    .rx .pluses__card-title {
         font-size: 20px;
     }
     .hprices__card {
@@ -990,7 +1046,7 @@ blockquote {
 
 @media only screen and (max-width: 479.98px) {
     .hvac__list > li,
-    .pluses__card-title {
+    .rx .pluses__card-title {
         font-size: 18px;
     }
 }
