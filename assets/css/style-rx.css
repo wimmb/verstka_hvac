@@ -390,6 +390,10 @@ body {
 
 .hero-sect-rx.sect-rx {
     background-color: #e9e5dc;
+    background-image: url('../../img/bg-right.svg');
+    background-position: 101% 50%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
     padding: 85px 0 80px;
 }
 
@@ -598,6 +602,10 @@ body {
 
 .hlogos-sect-rx.sect-rx {
     background-color: #e9e5dc;
+    background-image: url('../../img/bg-right.svg');
+    background-position: right bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .hlogos-sect-rx .sect-header {
@@ -1071,6 +1079,9 @@ body {
 		flex: 0 1 100%;
 		width: 100%;
 	}
+    .hero-sect-rx.sect-rx {
+        background-position: 30% 50%;
+    }
     .hero__content.two-cols {
         flex-direction: column-reverse;
     }
@@ -1093,6 +1104,9 @@ body {
     .works-pluses .pluses__card {
 	    flex: 0 1 calc(100% / 2 - 10px);
         padding: 20px 18px;
+    }
+    .hlogos-sect-rx.sect-rx {
+        background-image: none;
     }
     .hprices__cards {
         flex-direction: column;
