@@ -390,7 +390,7 @@ body {
 
 .hero-sect-rx.sect-rx {
     background-color: #e9e5dc;
-    padding: 80px 0;
+    padding: 85px 0 80px;
 }
 
 .hero__content {
@@ -1011,7 +1011,7 @@ body {
 	    padding: 55px 0;
     }
     .hero-sect-rx.sect-rx {
-        padding: 65px 0;
+        padding: 60px 0;
     }
     .rx .hero__title {
         font-size: 42px;
