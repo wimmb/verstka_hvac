@@ -232,6 +232,7 @@ body {
 	text-transform: uppercase;
 }
 
+.sect__bottom,
 .sheader__desc {
 	margin-top: 10px;
 	font-size: 24px;
@@ -241,18 +242,24 @@ body {
 }
 
 .sheader__desc a,
+.sect__bottom a,
 .sheader__desc span,
+.sect__bottom span,
 .sheader__desc b,
+.sect__bottom b,
+.sect__bottom strong,
 .sheader__desc strong {
     font-weight: 700;
 	color: #F8B92E;
 }
 
+.sect__bottom a,
 .sheader__desc a {
     display: inline-block;
     text-decoration: underline;
 }
 
+.sect__bottom a:hover,
 .sheader__desc a:hover {
     text-decoration: none;
 }
@@ -262,6 +269,11 @@ body {
 	margin-top: 40px;
 	position: relative;
 	text-align: center;
+}
+
+.sheader__desc p:not(:last-child),
+.sect__bottom p:not(:last-child) {
+    margin-bottom: 8px;
 }
 
 .two-cols {
@@ -425,7 +437,7 @@ body {
 }
 
 .hero__card {
-    border-radius: 25px;
+    border-radius: 20px;
     overflow: hidden;
 }
 
@@ -456,7 +468,7 @@ body {
 .works-pluses .pluses__card {
     padding: 20px 20px;
     border: 1px solid #F8B92E;
-    border-radius: 25px;
+    border-radius: 20px;
 	flex: 0 1 calc(100% / 2 - 15px);
 }
 
@@ -467,7 +479,7 @@ body {
     justify-content: center;
     width: 100px;
     height: 100px;
-    border-radius: 25px;
+    border-radius: 20px;
     margin: 0 auto;
     padding: 15px;
     overflow: hidden;
@@ -517,7 +529,7 @@ body {
     align-items: center;
     padding: 10px 10px 10px 28px;
     border: 2px solid #F8B92E;
-    border-radius: 25px;
+    border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
 }
@@ -638,7 +650,7 @@ body {
 .hchoose__card {
     background-color: #F8B92E;
     padding: 20px 20px;
-    border-radius: 25px;
+    border-radius: 20px;
     text-align: center;
     overflow: hidden;
 }
@@ -670,7 +682,7 @@ body {
     background-color: #e9e5dc;
     display: block;
     border: 2px solid #F8B92E;
-    border-radius: 25px;
+    border-radius: 20px;
     overflow: hidden;
 }
 
@@ -721,7 +733,7 @@ body {
     width: calc(100% / 2 - 15px);
     list-style: none;
     padding: 20px 20px;
-    border-radius: 25px;
+    border-radius: 20px;
     font-family: 'Archive', serif;
     font-size: 26px;
     font-weight: 400;
@@ -732,22 +744,50 @@ body {
 }
 
 .hvac__list > li a {
+    text-decoration: underline;
     display: inline-block;
     color: #000;
 }
 
 .hvac__list > li a:hover {
     color: #000;
-    text-decoration: underline;
+    text-decoration: none;
 }
-
+.hvac__gall3,
 .hvac__abgal {
     margin-top: 60px;
 }
 
 .hvac__abgal-card {
-    border-radius: 25px;
+    border-radius: 20px;
     overflow: hidden;
+}
+
+.gall3 {
+    display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.gall3 .gall3__item {
+    background-color: #e9e5dc;
+    display: block;
+	aspect-ratio: 1 / 1;
+	border-radius: 20px;
+    overflow: hidden;
+}
+
+.gall3 .gall3__item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+    cursor: pointer;
+	transition: all 0.4s ease;
+}
+
+.gall3 .gall3__item:hover img {
+	transform: scale(1.04);
 }
 
 .hmap-sect-rx.sect-rx {
@@ -812,7 +852,7 @@ body {
 .hcontacts__form {
     position: relative;
     background-color: #f6f2e9;
-    border-radius: 25px;
+    border-radius: 20px;
     padding: 30px 30px;
     overflow: hidden;
 }
@@ -825,12 +865,124 @@ body {
     margin-bottom: 0;
 }
 
+.block__toggles {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
 
+.block__toggle {
+	background-color: transparent;
+	border-bottom: 1px solid #999999;
+	padding: 18px 0 0;
+	transition: all 0.3s ease;
+	overflow: hidden;
+}
 
+.toggle__header {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	gap: 16px;
+	cursor: pointer;
+	padding-bottom: 20px;
+}
 
+.rx .toggle__header-title {
+	font-size: 26px;
+    font-weight: 400;
+    line-height: 1.15;
+    color: #000;
+	text-transform: none;
+}
 
+.toggle__header-btn {
+	flex-grow: 0;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	line-height: 0;
+	font-size: 20px;
+	color: #000;
+	text-align: center;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	overflow: hidden;
+}
 
+.toggle__header:hover .toggle__header-btn {
+	color: #999999;
+}
 
+.toggle__header-btn.v_active {
+	transform: rotateZ(180deg);
+}
+
+.toggle__content {
+	max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.haddition-sect-rx.sect-rx {
+    padding-bottom: 55px;
+}
+
+.haddition__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.haddition__card {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    width: calc(100% / 2 - 15px);
+    padding: 20px 20px;
+    border: 1px solid #F8B92E;
+    border-radius: 20px;
+}
+
+.haddition__card-img {
+    flex: 0 1 44%;
+    border-radius: 15px;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.haddition__card-img img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.haddition__card-text {
+    flex: 0 1 56%;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #000;
+}
+
+.haddition__card-text p:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+.haddition__card-text a {
+    color: #eaad2b;
+    font-weight: 700;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+.haddition__card-text a:hover {
+    color: #eaad2b;
+    text-decoration: none;
+}
 
 
 
@@ -864,6 +1016,7 @@ body {
     .rx .hero__title {
         font-size: 42px;
     }
+    .sect__bottom,
     .sheader__desc,
     .hero__desc {
         font-size: 20px;
@@ -872,6 +1025,7 @@ body {
         padding: 60px 0 50px;
     }
     .hvac__list > li,
+    .rx .toggle__header-title,
     .rx .hchoose__card-title,
     .rx .hprices__card-title,
     .rx .pluses__card-title {
@@ -893,6 +1047,9 @@ body {
     }
     .hconts-list li span {
         font-size: 24px;
+    }
+    .haddition__card-text {
+        font-size: 18px;
     }
 }
 
@@ -945,9 +1102,11 @@ body {
     .hprices__card {
         width: 100%;
     }
+    .haddition__cards,
     .hchoose__cards {
         gap: 20px;
     }
+    .haddition__card,
     .hchoose__card {
         padding: 20px 18px;
     }
@@ -960,6 +1119,7 @@ body {
         width: 100%;
     }
     .hservs__content,
+    .hvac__gall3,
     .hvac__abgal {
         margin-top: 50px;
     }
@@ -976,6 +1136,15 @@ body {
     .hconts-list li span {
         font-size: 22px;
     }
+    .haddition__card {
+        flex-direction: column;
+        align-items: inherit;
+    }
+    .haddition__card-img,
+    .haddition__card-text {
+        flex: 1 1 auto;
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 859.98px) {}
@@ -987,11 +1156,13 @@ body {
     .rx .hero__title {
         font-size: 32px;
     }
+    .sect__bottom,
     .sheader__desc,
     .hero__desc {
         font-size: 18px;
     }
     .hvac__list > li,
+    .rx .toggle__header-title,
     .rx .hchoose__card-title,
     .rx .hprices__card-title,
     .rx .pluses__card-title {
@@ -1011,6 +1182,10 @@ body {
 	    flex: 0 1 100%;
         width: 100%;
     }
+    .gall3 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+    .haddition__card-text {font-size: 16px;}
 }
 
 @media only screen and (max-width: 599.98px) {
@@ -1018,6 +1193,7 @@ body {
         width: 100%;
     }
     .hvac__list > li,
+    .rx .toggle__header-title,
     .rx .hchoose__card-title,
     .rx .pluses__card-title {
         font-size: 20px;
@@ -1032,7 +1208,7 @@ body {
     .hprices__card-img,
     .hprices__card-info {
         text-align: center;
-        flex: 0 1 100%;
+        flex: 1 1 auto;
         width: 100%;
         padding: 0;
     }
@@ -1041,6 +1217,13 @@ body {
     }
     .hconts-list li span {
         font-size: 20px;
+    }
+    .haddition__cards {
+        flex-direction: column;
+    }
+    .haddition__card {
+        flex: 1 1 auto;
+        width: 100%;
     }
 }
 
