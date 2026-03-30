@@ -612,39 +612,32 @@ body {
     max-width: 950px;
 }
 
-.hlogos__content {
-    overflow: hidden;
-}
-
-.hlogos__track {
+/*.hlogos__track {
 	display: flex;
 	align-items: center;
 	gap: 50px;
 	width: max-content;
 	animation: scroll 18s linear infinite;
+}*/
+
+.hlogos__carousel {
+    overflow: hidden;
+}
+
+.hlogos__carousel .swiper-slide {
+	box-sizing: border-box;
+    width: calc(100% / 5 - 32.5px);
+	height: auto;
 }
 
 .hlogos__item {
-	flex: 0 0 auto;
-	height: 90px;
 	display: flex;
+    height: 100%;
 	align-items: center;
 }
 
 .hlogos__item img {
-	height: 100%;
-	width: auto;
-	object-fit: contain;
 	pointer-events: none;
-}
-
-@keyframes scroll {
-	from {
-		transform: translateX(0);
-	}
-	to {
-		transform: translateX(-50%);
-	}
 }
 
 .hchoose-sect-rx.sect-rx {}
@@ -1053,9 +1046,6 @@ body {
     .hprices__card-text {
         font-size: 16px;
     }
-    .hlogos__content {
-        overflow: inherit;
-    }
     .hpromo2-sect-rx.sect-rx {
         padding: 40px 0;
     }
@@ -1067,6 +1057,9 @@ body {
     }
     .haddition__card-text {
         font-size: 18px;
+    }
+    .hlogos__carousel .swiper-slide {
+        width: calc(100% / 4 - 30px);
     }
 }
 
@@ -1168,6 +1161,9 @@ body {
         flex: 1 1 auto;
         width: 100%;
     }
+    .hlogos__carousel .swiper-slide {
+        width: calc(100% / 3 - 27px);
+    }
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -1245,6 +1241,9 @@ body {
     .haddition__card {
         flex: 1 1 auto;
         width: 100%;
+    }
+    .hlogos__carousel .swiper-slide {
+        width: calc(100% / 2 - 21px);
     }
 }
 

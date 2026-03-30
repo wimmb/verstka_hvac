@@ -28,21 +28,21 @@ $(document).ready(function () {
       			el: '.hero--pagi',
       			clickable: true,
     		},
-			/*navigation: {
-      		    nextEl: '.hero--navi-next',
-      		    prevEl: '.hero--navi-prev',
-    		},*/
 		});
 	}
 
 	// Logos carousel swiper
-	const tracks = document.querySelectorAll('.hlogos__track');
-	if (tracks.length) {
-		tracks.forEach(track => {
-			if (!track.classList.contains('is-duplicated')) {
-				track.innerHTML += track.innerHTML;
-				track.classList.add('is-duplicated');
-			}
+	const hlogos__carousel = document.querySelector('.hlogos__carousel');
+	if (hlogos__carousel) {
+		const swiper = new Swiper(hlogos__carousel, {
+			slidesPerView: 'auto',
+			allowTouchMove: false,
+			spaceBetween: 40,
+			loop: true,
+			speed: 1000,
+            autoplay: {
+				delay: 3000,
+			},
 		});
 	}
 });
